@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calculadora {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
+
+#pantalla {
+    width: 95%;
+    height: 60px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#operation {
+    font-size: 1.5rem;
+    color: #888;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#result {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 70px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:active,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.operador {
+    background-color: #ff9500;
+    color: white;
+}
+
+button.operador:hover,
+button.operador:focus {
+    background-color: #e08a00;
+}
+
+button:not(.operador) {
+    background-color: #333;
+    color: white;
+}
+
+button:not(.operador):hover,
+button:not(.operador):focus {
+    background-color: #444;
+}
+
+button.active {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
