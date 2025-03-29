@@ -13,37 +13,42 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 
 .calculadora {
     background-color: #1e1e1e;
-    padding: 30px;
+    padding: 3vh;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 90vw;
-    max-width: 400px;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h3 {
     color: #ff9500;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
 }
 
 #pantalla {
     width: 95%;
-    height: 80px;
-    padding: 10px;
+    min-height: 12vh;
+    padding: 1vh;
     background-color: #333;
     color: white;
-    border-radius: 25px;
-    margin-bottom: 10px;
+    border-radius: 2vh;
+    margin-bottom: 2vh;
     overflow: hidden;
 }
 
 #operation {
-    font-size: 1.5rem;
+    font-size: 4vh;
     color: #888;
     text-align: left;
     white-space: nowrap;
@@ -52,7 +57,7 @@ h3 {
 }
 
 #result {
-    font-size: 2.5rem;
+    font-size: 4vh;
     font-weight: bold;
     text-align: right;
     white-space: nowrap;
@@ -63,22 +68,25 @@ h3 {
 .botones {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 1.5vh;
+    flex-grow: 1;
+    align-items: center;
 }
 
 button {
-    height: 70px;
-    font-size: 2rem;
+    height: 8vh;
+    font-size: 3vh;
     border: none;
-    border-radius: 25px;
+    border-radius: 2vh;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:active,
-button:focus {
+button:focus-visible {
     outline: none;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 1vh 0.2vh rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 button:active {
@@ -91,7 +99,7 @@ button.operador {
 }
 
 button.operador:hover,
-button.operador:focus {
+button.operador:focus-visible {
     background-color: #e08a00;
 }
 
@@ -101,67 +109,6 @@ button:not(.operador) {
 }
 
 button:not(.operador):hover,
-button:not(.operador):focus {
+button:not(.operador):focus-visible {
     background-color: #444;
-}
-
-button.active {
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .calculadora {
-        width: 95vw;
-        padding: 20px;
-    }
-
-    button {
-        height: 60px;
-        font-size: 1.5rem;
-    }
-
-    #result {
-        font-size: 2rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-    .calculadora {
-        width: 50vw;
-        max-width: 400px;
-    }
-
-    button {
-        height: 80px;
-        font-size: 2.5rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .calculadora {
-        width: 30vw;
-        max-width: 400px;
-    }
-
-    button {
-        height: 90px;
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 1920px) {
-    .calculadora {
-        width: 25vw;
-        max-width: 600px;
-    }
-
-    button {
-        height: 100px;
-        font-size: 3.5rem;
-    }
-
-    #result {
-        font-size: 3.5rem;
-    }
 }
