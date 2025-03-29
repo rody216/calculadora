@@ -15,13 +15,6 @@ body {
     width: 100%;
 }
 
-h3 {
-    color: #ff9500;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .calculadora {
     background-color: #1e1e1e;
     padding: 30px;
@@ -32,9 +25,15 @@ h3 {
     max-width: 400px;
 }
 
+h3 {
+    color: #ff9500;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 #pantalla {
     width: 95%;
-    height: 100px;
+    height: 80px;
     padding: 10px;
     background-color: #333;
     color: white;
@@ -111,7 +110,23 @@ button.active {
 }
 
 /* Media Queries for Responsiveness */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+    .calculadora {
+        width: 95vw;
+        padding: 20px;
+    }
+
+    button {
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    #result {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
     .calculadora {
         width: 50vw;
         max-width: 400px;
